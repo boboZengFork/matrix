@@ -186,3 +186,15 @@ project.tasks.whenTaskAdded {
         }
     }
 }
+
+
+
+//apply plugin: 'com.google.osdetector'
+//com.google.osdetector 插件是一个用于检测操作系统信息的 Gradle 插件。它可以帮助你在构建过程中识别不同操作系统，并且根据不同操作系统执行不同的构建任务或配置。
+//使用这个插件，你可以在 Gradle 构建脚本中根据操作系统的不同执行特定的操作，比如针对 Windows、Linux、Mac 等系统执行不同的命令或配置不同的环境变量。
+//./gradlew detectOperatingSystem
+task detectOperatingSystem {
+    doLast {
+        println "Detected operating system: ${osdetector.os}"
+    }
+}
